@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>depstore - Pterodactyl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-server"></i> Panel Pterodactyl Store</h1>
+            <p>Panel hosting untuk game server dan aplikasi</p>
+        </header>
+
+        <div class="main-content">
+            <div class="package-selection">
+                <h2><i class="fas fa-box"></i> Pilih Paket RAM</h2>
+                <div class="packages">
+                    <div class="package" data-ram="1GB" data-price="1000">
+                        <h3>1GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 1.000</p>
+                    </div>
+                    <div class="package active" data-ram="2GB" data-price="2000">
+                        <h3>2GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 2.000</p>
+                    </div>
+                    <div class="package" data-ram="3GB" data-price="3000">
+                        <h3>3GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 3.000</p>
+                    </div>
+                    <div class="package" data-ram="4GB" data-price="4000">
+                        <h3>4GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 4.000</p>
+                    </div>
+                    <div class="package" data-ram="5GB" data-price="5000">
+                        <h3>5GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 5.000</p>
+                    </div>
+                    <div class="package" data-ram="6GB" data-price="6000">
+                        <h3>6GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 6.000</p>
+                    </div>
+                    <div class="package" data-ram="7GB" data-price="7000">
+                        <h3>7GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 7.000</p>
+                    </div>
+                    <div class="package" data-ram="8GB" data-price="8000">
+                        <h3>8GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 8.000</p>
+                    </div>
+                    <div class="package" data-ram="9GB" data-price="9000">
+                        <h3>9GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 9.000</p>
+                    </div>
+                    <div class="package" data-ram="10GB" data-price="10000">
+                        <h3>10GB RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 10.000</p>
+                    </div>
+                    <div class="package unli" data-ram="Unlimited" data-price="12000">
+                        <h3><i class="fas fa-infinity"></i> Unlimited RAM</h3>
+                        <p>Unlimited Storage</p>
+                        <p>Unlimited Database</p>
+                        <p class="price">Rp 12.000</p>
+                        <span class="badge">TERBAIK</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h2><i class="fas fa-shopping-cart"></i> Form Pemesanan</h2>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="panelName"><i class="fas fa-tag"></i> Nama Panel:</label>
+                        <input type="text" id="panelName" placeholder="Contoh: MyGameServer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" placeholder="email@anda.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telegram"><i class="fab fa-telegram"></i> Telegram Username:</label>
+                        <input type="text" id="telegram" placeholder="@username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-credit-card"></i> Metode Pembayaran:</label>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="dana" required>
+                                <div class="payment-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="Dana" style="height: 20px; width: auto;">
+                                    Dana
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="gopay">
+                                <div class="payment-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/GoPay.svg" alt="GoPay" style="height: 20px; width: auto;">
+                                    GoPay
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="qris">
+                                <div class="payment-icon">
+                                    <i class="fas fa-qrcode"></i> QRIS
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="buktiTF"><i class="fas fa-upload"></i> Upload Bukti Transfer:</label>
+                        <input type="file" id="buktiTF" accept="image/*,.pdf" required>
+                        <small>Format: JPG, PNG, atau PDF (max 2MB)</small>
+                        <div id="filePreview"></div>
+                    </div>
+
+                    <div class="summary">
+                        <h3><i class="fas fa-receipt"></i> Ringkasan Pesanan</h3>
+                        <div class="summary-details">
+                            <p><strong>Paket:</strong> <span id="selectedPackage">2GB RAM</span></p>
+                            <p><strong>Harga:</strong> <span id="selectedPrice">Rp 2.000</span></p>
+                            <p><strong>Nama Panel:</strong> <span id="displayPanelName">-</span></p>
+                            <p><strong>Metode Bayar:</strong> <span id="displayPayment">-</span></p>
+                        </div>
+                        <div class="total">
+                            <h4>Total: <span id="totalPrice">Rp 2.000</span></h4>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Kirim Pesanan ke Admin
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3><i class="fas fa-info-circle"></i> Cara Pemesanan:</h3>
+            <ol>
+                <li>Pilih paket RAM yang diinginkan</li>
+                <li>Isi data panel dan kontak</li>
+                <li>Pilih metode pembayaran (Dana/GoPay/QRIS)</li>
+                <li>Transfer sesuai harga paket</li>
+                <li>Upload bukti transfer</li>
+                <li>Pesanan akan dikirim ke admin Telegram</li>
+                <li>Admin akan verifikasi dan membuat panel</li>
+                <li>Panel akan dikirim ke email/Telegram Anda</li>
+            </ol>
+        </div>
+
+        <div class="status-modal" id="statusModal">
+            <div class="modal-content">
+                <h2><i class="fas fa-spinner fa-spin"></i> Mengirim Pesanan...</h2>
+                <p id="statusMessage">Mengirim data ke admin Telegram...</p>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
